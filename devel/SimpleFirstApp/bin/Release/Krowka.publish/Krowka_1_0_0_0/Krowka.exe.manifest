@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asmv1:assemblyIdentity name="Krowka.exe" version="1.0.0.0" publicKeyToken="8ae1c323488f9cce" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Krowka" version="0.1.1.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Krowka.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Krowka.exe" size="32768">
+      <assemblyIdentity name="Krowka" version="0.1.1.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>SSCG+HrxOdL/H0r4bNfU6pF5Q5Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=KUBA\teodor" issuerKeyHash="8960c537801f58e7fb2e01fc7b5cfa41cf89eefc" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>AYdKD4yS5x753B3aD3qX1V3r46M=</DigestValue></Reference></SignedInfo><SignatureValue>AlcT+myrmYqftrkrZ1IXort75TDMv0ARFrBA+23S6U2wNsTNWY7CVhSQ6wT9w/TVieFqvGY17F3eb7EG1+mTlMNs6ueh8KqA7GmgZSJXfCwlVmsKU3VIwY+w6LGV//cEbqVzlPU23vyvoZC0VXjqmbhpalRS2bAWJebIiI8lrFE=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>6+Dxs7n1PBIM4wbOdPK3QQD9NGLC21ubi8G6sTYyATapzSvmdR6X/AvjBsjC4MDqn0vJ3Pw2lhs1/FKg69nKxR87IqNfs1M0Eu0oBUDc0hV395TMpXDSRBl3VH4CuyAZHXt9j2WDmTLttWlpfSMSKXf683XCsdkAzCsa93nFkKU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="a3e3eb5dd5977a0fda1ddcf91ee7928c0f4a8701" Description="" Url=""><as:assemblyIdentity name="Krowka.exe" version="1.0.0.0" publicKeyToken="8ae1c323488f9cce" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=KUBA\teodor</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>1GSLj1WfdecBDcRs213zWtfyJQw=</DigestValue></Reference></SignedInfo><SignatureValue>0h2zIS+DsVxrEC63STv3SCMG59o4VX2quaCi4cTs/fQ/g7zgsn/e0tv0QgdcNXM5S4V8VWgRgHwtvIF8uH4smjO/tOpfUBVA/MoWk2b5ZuFrUWAVut6YqFN/3y9XY5KlVV+Ng7GwRF+ecaOvgD/nXFT3W2OZ8YgtLuZ3ohMgUZk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>6+Dxs7n1PBIM4wbOdPK3QQD9NGLC21ubi8G6sTYyATapzSvmdR6X/AvjBsjC4MDqn0vJ3Pw2lhs1/FKg69nKxR87IqNfs1M0Eu0oBUDc0hV395TMpXDSRBl3VH4CuyAZHXt9j2WDmTLttWlpfSMSKXf683XCsdkAzCsa93nFkKU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBvTCCASqgAwIBAgIQDwAnZdiAOYFDXFgg5g7jfjAJBgUrDgMCHQUAMCExHzAdBgNVBAMeFgBLAFUAQgBBAFwAdABlAG8AZABvAHIwHhcNMDYxMDA5MTYwNDMyWhcNMDcxMDA5MjIwNDMyWjAhMR8wHQYDVQQDHhYASwBVAEIAQQBcAHQAZQBvAGQAbwByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDr4PGzufU8EgzjBs508rdBAP00YsLbW5uLwbqxNjIBNqnNK+Z1Hpf8C+MGyMLgwOqfS8nc/DaWGzX8UqDr2crFHzsio1+zUzQS7SgFQNzSFXf3lMylcNJEGXdUfgK7IBkde32PZYOZMu21aWl9IxIpd/rzdcKx2QDMKxr3ecWQpQIDAQABMAkGBSsOAwIdBQADgYEA1df557PEYiQF66PvVwBcKiG7lO3NZfUBPlVIb2I+Vaa4Ge/UQFoaTWKh71jgCKEiZqDvlEZjZgOaKPo9KyK3nQoe3qifzDfUFvnPTLoLUkUvac8va0M42D/w8GM4fsAX1cvtucnfSnCkDJwPAGeAq3r/kvcpD8PvewnDizTxXW0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
