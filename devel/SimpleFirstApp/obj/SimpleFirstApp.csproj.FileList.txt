@@ -24,3 +24,5 @@ obj\Debug\Krowka.exe.manifest
 obj\Debug\Krowka.application
 obj\Debug\SimpleFirstApp.AboutBox1.resources
 obj\Release\SimpleFirstApp.AboutBox1.resources
+obj\Release\Krowka.TrustInfo.xml
+obj\Debug\Krowka.TrustInfo.xml
