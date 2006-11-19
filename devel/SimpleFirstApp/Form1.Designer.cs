@@ -69,21 +69,40 @@ namespace SimpleFirstApp
             this.state3 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.neighbours_count = new System.Windows.Forms.NumericUpDown();
-            this.button2 = new System.Windows.Forms.Button();
+            this.group_function_entry = new System.Windows.Forms.GroupBox();
+            this.function_entry_neigbour = new System.Windows.Forms.TextBox();
+            this.function_entry_btn_insert = new System.Windows.Forms.Button();
+            this.function_entry_was = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.function_entry_change_to = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.function_entry_list = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.n2_group = new System.Windows.Forms.GroupBox();
+            this.n2_btn_set = new System.Windows.Forms.Button();
+            this.n2_grid = new System.Windows.Forms.DataGridView();
+            this.n2_window_y = new System.Windows.Forms.NumericUpDown();
+            this.n2_window_x = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.func_remove = new System.Windows.Forms.Button();
-            this.func_add = new System.Windows.Forms.Button();
-            this.cell_next_on = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cell_on = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.function_parametrs = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.func_remove = new System.Windows.Forms.Button();
             this.function_list = new System.Windows.Forms.ListBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.abc_del_symbol = new System.Windows.Forms.Button();
+            this.abc_add_symbol = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.abc_btn_color = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.abc_symbol = new System.Windows.Forms.TextBox();
+            this.abc_color_grid = new System.Windows.Forms.DataGridView();
+            this.abc_col_int = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abc_col_symbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abc_col_color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colordialog = new System.Windows.Forms.ColorDialog();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -116,6 +135,13 @@ namespace SimpleFirstApp
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.symbol_menu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.extra_status_lbl = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.function_arguments_size = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.n2_save_btn = new System.Windows.Forms.Button();
+            this.n2_load_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.refresh)).BeginInit();
@@ -127,20 +153,30 @@ namespace SimpleFirstApp
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.savestate)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.group_function_entry.SuspendLayout();
+            this.n2_group.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.n2_grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n2_window_y)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n2_window_x)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.neighbours_count)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abc_color_grid)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.function_arguments_size)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
             // 
             this.panel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel.Location = new System.Drawing.Point(6, 6);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(505, 505);
             this.panel.TabIndex = 3;
             this.panel.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.panel_PreviewKeyDown);
+            this.panel.Click += new System.EventHandler(this.panel_Click);
             this.panel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_MouseDown);
             this.panel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_MouseMove);
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Paint);
@@ -151,6 +187,7 @@ namespace SimpleFirstApp
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(12, 28);
             this.tabControl1.Name = "tabControl1";
@@ -175,6 +212,8 @@ namespace SimpleFirstApp
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Grid";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Enter += new System.EventHandler(this.tabPage1_Enter);
+            this.tabPage1.Leave += new System.EventHandler(this.tabPage1_Leave);
             // 
             // label4
             // 
@@ -563,181 +602,416 @@ namespace SimpleFirstApp
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.group_function_entry);
+            this.tabPage2.Controls.Add(this.n2_btn_set);
+            this.tabPage2.Controls.Add(this.n2_group);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(772, 591);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Settings";
+            this.tabPage2.Text = "Function";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // group_function_entry
             // 
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(373, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(229, 338);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Alphabet";
+            this.group_function_entry.Controls.Add(this.function_entry_neigbour);
+            this.group_function_entry.Controls.Add(this.function_entry_btn_insert);
+            this.group_function_entry.Controls.Add(this.function_entry_was);
+            this.group_function_entry.Controls.Add(this.label15);
+            this.group_function_entry.Controls.Add(this.function_entry_change_to);
+            this.group_function_entry.Controls.Add(this.label14);
+            this.group_function_entry.Controls.Add(this.function_entry_list);
+            this.group_function_entry.Controls.Add(this.label10);
+            this.group_function_entry.Location = new System.Drawing.Point(6, 6);
+            this.group_function_entry.Name = "group_function_entry";
+            this.group_function_entry.Size = new System.Drawing.Size(256, 230);
+            this.group_function_entry.TabIndex = 4;
+            this.group_function_entry.TabStop = false;
+            this.group_function_entry.Text = "Function entry";
             // 
-            // groupBox4
+            // function_entry_neigbour
             // 
-            this.groupBox4.Controls.Add(this.neighbours_count);
-            this.groupBox4.Controls.Add(this.button2);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.func_remove);
-            this.groupBox4.Controls.Add(this.func_add);
-            this.groupBox4.Controls.Add(this.cell_next_on);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Controls.Add(this.cell_on);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.function_list);
-            this.groupBox4.Location = new System.Drawing.Point(6, 3);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(195, 339);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Function";
+            this.function_entry_neigbour.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.function_entry_neigbour.Location = new System.Drawing.Point(67, 26);
+            this.function_entry_neigbour.Name = "function_entry_neigbour";
+            this.function_entry_neigbour.Size = new System.Drawing.Size(121, 20);
+            this.function_entry_neigbour.TabIndex = 14;
+            this.function_entry_neigbour.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // neighbours_count
+            // function_entry_btn_insert
             // 
-            this.neighbours_count.Location = new System.Drawing.Point(90, 18);
-            this.neighbours_count.Maximum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.neighbours_count.Name = "neighbours_count";
-            this.neighbours_count.Size = new System.Drawing.Size(77, 20);
-            this.neighbours_count.TabIndex = 14;
+            this.function_entry_btn_insert.Location = new System.Drawing.Point(7, 188);
+            this.function_entry_btn_insert.Name = "function_entry_btn_insert";
+            this.function_entry_btn_insert.Size = new System.Drawing.Size(77, 30);
+            this.function_entry_btn_insert.TabIndex = 12;
+            this.function_entry_btn_insert.Text = "Insert";
+            this.function_entry_btn_insert.UseVisualStyleBackColor = true;
+            this.function_entry_btn_insert.Click += new System.EventHandler(this.function_entry_btn_insert_Click);
             // 
-            // button2
+            // function_entry_was
             // 
-            this.button2.Location = new System.Drawing.Point(107, 305);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 26);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Load...";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.function_entry_was.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.function_entry_was.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.function_entry_was.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.function_entry_was.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.function_entry_was.FormattingEnabled = true;
+            this.function_entry_was.Location = new System.Drawing.Point(67, 49);
+            this.function_entry_was.Name = "function_entry_was";
+            this.function_entry_was.Size = new System.Drawing.Size(121, 21);
+            this.function_entry_was.TabIndex = 11;
+            this.function_entry_was.SelectionChangeCommitted += new System.EventHandler(this.function_entry_was_SelectionChangeCommitted);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 84);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(55, 13);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "change to";
+            // 
+            // function_entry_change_to
+            // 
+            this.function_entry_change_to.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.function_entry_change_to.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.function_entry_change_to.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.function_entry_change_to.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.function_entry_change_to.FormattingEnabled = true;
+            this.function_entry_change_to.Location = new System.Drawing.Point(67, 76);
+            this.function_entry_change_to.Name = "function_entry_change_to";
+            this.function_entry_change_to.Size = new System.Drawing.Size(121, 21);
+            this.function_entry_change_to.TabIndex = 9;
+            this.function_entry_change_to.SelectionChangeCommitted += new System.EventHandler(this.function_entry_change_to_SelectionChangeCommitted);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 57);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(29, 13);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "was:";
+            // 
+            // function_entry_list
+            // 
+            this.function_entry_list.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.function_entry_list.FormattingEnabled = true;
+            this.function_entry_list.HorizontalScrollbar = true;
+            this.function_entry_list.Location = new System.Drawing.Point(6, 115);
+            this.function_entry_list.Name = "function_entry_list";
+            this.function_entry_list.Size = new System.Drawing.Size(244, 67);
+            this.function_entry_list.TabIndex = 3;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(126, 55);
+            this.label10.Location = new System.Drawing.Point(4, 28);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 13);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "0";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Neigbours";
             // 
-            // button1
+            // n2_group
             // 
-            this.button1.Location = new System.Drawing.Point(38, 305);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 26);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Save...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.n2_group.Controls.Add(this.n2_load_btn);
+            this.n2_group.Controls.Add(this.n2_save_btn);
+            this.n2_group.Controls.Add(this.n2_grid);
+            this.n2_group.Controls.Add(this.n2_window_y);
+            this.n2_group.Controls.Add(this.n2_window_x);
+            this.n2_group.Controls.Add(this.label9);
+            this.n2_group.Controls.Add(this.label8);
+            this.n2_group.Cursor = System.Windows.Forms.Cursors.Default;
+            this.n2_group.Location = new System.Drawing.Point(268, 6);
+            this.n2_group.Name = "n2_group";
+            this.n2_group.Size = new System.Drawing.Size(498, 545);
+            this.n2_group.TabIndex = 3;
+            this.n2_group.TabStop = false;
+            this.n2_group.Text = "Neighbours";
+            this.n2_group.Enter += new System.EventHandler(this.n2_group_Enter);
+            // 
+            // n2_btn_set
+            // 
+            this.n2_btn_set.Location = new System.Drawing.Point(6, 557);
+            this.n2_btn_set.Name = "n2_btn_set";
+            this.n2_btn_set.Size = new System.Drawing.Size(75, 23);
+            this.n2_btn_set.TabIndex = 9;
+            this.n2_btn_set.Text = "Set it";
+            this.n2_btn_set.UseVisualStyleBackColor = true;
+            this.n2_btn_set.Click += new System.EventHandler(this.n2_btn_set_Click);
+            // 
+            // n2_grid
+            // 
+            this.n2_grid.AllowDrop = true;
+            this.n2_grid.AllowUserToAddRows = false;
+            this.n2_grid.AllowUserToDeleteRows = false;
+            this.n2_grid.AllowUserToResizeColumns = false;
+            this.n2_grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.n2_grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.n2_grid.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.n2_grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.n2_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.n2_grid.ColumnHeadersVisible = false;
+            this.n2_grid.ContextMenuStrip = this.symbol_menu;
+            this.n2_grid.Location = new System.Drawing.Point(9, 52);
+            this.n2_grid.Name = "n2_grid";
+            this.n2_grid.RowHeadersVisible = false;
+            this.n2_grid.Size = new System.Drawing.Size(474, 417);
+            this.n2_grid.TabIndex = 7;
+            this.n2_grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.n2_grid_CellClick);
+            this.n2_grid.ContextMenuStripChanged += new System.EventHandler(this.n2_grid_ContextMenuStripChanged);
+            this.n2_grid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.n2_grid_CellLeave);
+            // 
+            // n2_window_y
+            // 
+            this.n2_window_y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.n2_window_y.Location = new System.Drawing.Point(156, 26);
+            this.n2_window_y.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.n2_window_y.Name = "n2_window_y";
+            this.n2_window_y.Size = new System.Drawing.Size(45, 20);
+            this.n2_window_y.TabIndex = 6;
+            this.n2_window_y.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.n2_window_y.ValueChanged += new System.EventHandler(this.n2_window_y_ValueChanged);
+            // 
+            // n2_window_x
+            // 
+            this.n2_window_x.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.n2_window_x.Location = new System.Drawing.Point(82, 26);
+            this.n2_window_x.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.n2_window_x.Name = "n2_window_x";
+            this.n2_window_x.Size = new System.Drawing.Size(50, 20);
+            this.n2_window_x.TabIndex = 5;
+            this.n2_window_x.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            this.n2_window_x.ValueChanged += new System.EventHandler(this.n2_window_x_ValueChanged);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(87, 55);
+            this.label9.Location = new System.Drawing.Point(138, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "1";
+            this.label9.Size = new System.Drawing.Size(12, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "x";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 31);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(70, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Window size:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.function_arguments_size);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.function_parametrs);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.func_remove);
+            this.groupBox4.Controls.Add(this.function_list);
+            this.groupBox4.Location = new System.Drawing.Point(6, 242);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(256, 309);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Function";
+            // 
+            // function_parametrs
+            // 
+            this.function_parametrs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.function_parametrs.Location = new System.Drawing.Point(6, 32);
+            this.function_parametrs.Name = "function_parametrs";
+            this.function_parametrs.Size = new System.Drawing.Size(244, 20);
+            this.function_parametrs.TabIndex = 13;
+            this.function_parametrs.Leave += new System.EventHandler(this.function_parametrs_Leave);
+            this.function_parametrs.TextChanged += new System.EventHandler(this.function_parametrs_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(3, 16);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(107, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Function parametr list";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(152, 263);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(65, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Load";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // func_remove
             // 
-            this.func_remove.Location = new System.Drawing.Point(107, 100);
+            this.func_remove.Location = new System.Drawing.Point(10, 263);
             this.func_remove.Name = "func_remove";
-            this.func_remove.Size = new System.Drawing.Size(60, 26);
+            this.func_remove.Size = new System.Drawing.Size(65, 23);
             this.func_remove.TabIndex = 11;
             this.func_remove.Text = "Remove";
             this.func_remove.UseVisualStyleBackColor = true;
             this.func_remove.Click += new System.EventHandler(this.func_remove_Click);
             // 
-            // func_add
+            // function_list
             // 
-            this.func_add.Location = new System.Drawing.Point(38, 100);
-            this.func_add.Name = "func_add";
-            this.func_add.Size = new System.Drawing.Size(60, 26);
-            this.func_add.TabIndex = 7;
-            this.func_add.Text = "Add";
-            this.func_add.UseVisualStyleBackColor = true;
-            this.func_add.Click += new System.EventHandler(this.add_def_Click);
+            this.function_list.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.function_list.FormattingEnabled = true;
+            this.function_list.HorizontalScrollbar = true;
+            this.function_list.Location = new System.Drawing.Point(6, 58);
+            this.function_list.Name = "function_list";
+            this.function_list.Size = new System.Drawing.Size(243, 158);
+            this.function_list.TabIndex = 0;
+            this.function_list.SelectedIndexChanged += new System.EventHandler(this.function_list_Click);
+            this.function_list.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.function_list_MeasureItem);
             // 
-            // cell_next_on
+            // tabPage3
             // 
-            this.cell_next_on.AutoSize = true;
-            this.cell_next_on.Checked = true;
-            this.cell_next_on.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cell_next_on.Location = new System.Drawing.Point(128, 73);
-            this.cell_next_on.Name = "cell_next_on";
-            this.cell_next_on.Size = new System.Drawing.Size(32, 17);
-            this.cell_next_on.TabIndex = 6;
-            this.cell_next_on.Text = "1";
-            this.cell_next_on.UseVisualStyleBackColor = true;
-            this.cell_next_on.CheckedChanged += new System.EventHandler(this.cell_next_on_CheckedChanged);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(772, 591);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Other";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // groupBox1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(23, 74);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Switch to";
+            this.groupBox1.Controls.Add(this.abc_del_symbol);
+            this.groupBox1.Controls.Add(this.abc_add_symbol);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.abc_btn_color);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.abc_symbol);
+            this.groupBox1.Controls.Add(this.abc_color_grid);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(214, 579);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Alphabet";
+            // 
+            // abc_del_symbol
+            // 
+            this.abc_del_symbol.Enabled = false;
+            this.abc_del_symbol.Location = new System.Drawing.Point(133, 95);
+            this.abc_del_symbol.Name = "abc_del_symbol";
+            this.abc_del_symbol.Size = new System.Drawing.Size(74, 23);
+            this.abc_del_symbol.TabIndex = 6;
+            this.abc_del_symbol.Text = "Remove";
+            this.abc_del_symbol.UseVisualStyleBackColor = true;
+            this.abc_del_symbol.Click += new System.EventHandler(this.abc_del_symbol_Click);
+            // 
+            // abc_add_symbol
+            // 
+            this.abc_add_symbol.Location = new System.Drawing.Point(6, 95);
+            this.abc_add_symbol.Name = "abc_add_symbol";
+            this.abc_add_symbol.Size = new System.Drawing.Size(78, 23);
+            this.abc_add_symbol.TabIndex = 5;
+            this.abc_add_symbol.Text = "Add";
+            this.abc_add_symbol.UseVisualStyleBackColor = true;
+            this.abc_add_symbol.Click += new System.EventHandler(this.abc_add_symbol_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 25);
+            this.label7.Location = new System.Drawing.Point(6, 64);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Neighbours";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Color: ";
             // 
-            // cell_on
+            // abc_btn_color
             // 
-            this.cell_on.AutoSize = true;
-            this.cell_on.Location = new System.Drawing.Point(90, 73);
-            this.cell_on.Name = "cell_on";
-            this.cell_on.Size = new System.Drawing.Size(32, 17);
-            this.cell_on.TabIndex = 2;
-            this.cell_on.Text = "0";
-            this.cell_on.UseVisualStyleBackColor = true;
-            this.cell_on.CheckedChanged += new System.EventHandler(this.cell_on_CheckedChanged);
+            this.abc_btn_color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.abc_btn_color.Location = new System.Drawing.Point(56, 57);
+            this.abc_btn_color.Name = "abc_btn_color";
+            this.abc_btn_color.Size = new System.Drawing.Size(20, 20);
+            this.abc_btn_color.TabIndex = 3;
+            this.abc_btn_color.UseVisualStyleBackColor = true;
+            this.abc_btn_color.Click += new System.EventHandler(this.abc_btn_color_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 55);
+            this.label6.Location = new System.Drawing.Point(6, 31);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Cell was";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Symbol:";
             // 
-            // function_list
+            // abc_symbol
             // 
-            this.function_list.FormattingEnabled = true;
-            this.function_list.Items.AddRange(new object[] {
-            "2: 10",
-            "3: 11"});
-            this.function_list.Location = new System.Drawing.Point(38, 136);
-            this.function_list.Name = "function_list";
-            this.function_list.Size = new System.Drawing.Size(129, 160);
-            this.function_list.TabIndex = 0;
-            this.function_list.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.function_list_MeasureItem);
+            this.abc_symbol.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.abc_symbol.Location = new System.Drawing.Point(56, 31);
+            this.abc_symbol.MaxLength = 2;
+            this.abc_symbol.Name = "abc_symbol";
+            this.abc_symbol.Size = new System.Drawing.Size(48, 20);
+            this.abc_symbol.TabIndex = 1;
+            // 
+            // abc_color_grid
+            // 
+            this.abc_color_grid.AllowUserToAddRows = false;
+            this.abc_color_grid.AllowUserToResizeColumns = false;
+            this.abc_color_grid.AllowUserToResizeRows = false;
+            this.abc_color_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.abc_color_grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.abc_col_int,
+            this.abc_col_symbol,
+            this.abc_col_color});
+            this.abc_color_grid.Location = new System.Drawing.Point(6, 134);
+            this.abc_color_grid.MultiSelect = false;
+            this.abc_color_grid.Name = "abc_color_grid";
+            this.abc_color_grid.RowHeadersVisible = false;
+            this.abc_color_grid.RowTemplate.Height = 18;
+            this.abc_color_grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.abc_color_grid.Size = new System.Drawing.Size(201, 439);
+            this.abc_color_grid.TabIndex = 0;
+            this.abc_color_grid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.abc_color_grid_CellClick);
+            // 
+            // abc_col_int
+            // 
+            this.abc_col_int.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.abc_col_int.HeaderText = "Number";
+            this.abc_col_int.Name = "abc_col_int";
+            this.abc_col_int.Width = 69;
+            // 
+            // abc_col_symbol
+            // 
+            this.abc_col_symbol.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.abc_col_symbol.HeaderText = "Symbol";
+            this.abc_col_symbol.Name = "abc_col_symbol";
+            this.abc_col_symbol.Width = 66;
+            // 
+            // abc_col_color
+            // 
+            this.abc_col_color.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.abc_col_color.HeaderText = "Color";
+            this.abc_col_color.Name = "abc_col_color";
+            this.abc_col_color.Width = 56;
             // 
             // statusStrip1
             // 
@@ -745,10 +1019,11 @@ namespace SimpleFirstApp
             this.toolStripStatusLabel1,
             this.step_label,
             this.toolStripStatusLabel2,
-            this.lbl_stat_cursor});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 651);
+            this.lbl_stat_cursor,
+            this.extra_status_lbl});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 658);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(792, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(791, 22);
             this.statusStrip1.TabIndex = 12;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -813,7 +1088,7 @@ namespace SimpleFirstApp
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(792, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(791, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -967,11 +1242,86 @@ namespace SimpleFirstApp
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
+            // symbol_menu
+            // 
+            this.symbol_menu.MaximumSize = new System.Drawing.Size(0, 500);
+            this.symbol_menu.Name = "symbol_menu";
+            this.symbol_menu.Size = new System.Drawing.Size(61, 4);
+            this.symbol_menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.symbol_menu_ItemClicked);
+            // 
+            // extra_status_lbl
+            // 
+            this.extra_status_lbl.Name = "extra_status_lbl";
+            this.extra_status_lbl.Size = new System.Drawing.Size(109, 17);
+            this.extra_status_lbl.Text = "toolStripStatusLabel3";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 230);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(117, 13);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Liczba wartoœci funkcji:";
+            // 
+            // function_arguments_size
+            // 
+            this.function_arguments_size.Location = new System.Drawing.Point(129, 228);
+            this.function_arguments_size.Maximum = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            this.function_arguments_size.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.function_arguments_size.Name = "function_arguments_size";
+            this.function_arguments_size.Size = new System.Drawing.Size(45, 20);
+            this.function_arguments_size.TabIndex = 15;
+            this.function_arguments_size.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.function_arguments_size.ValueChanged += new System.EventHandler(this.function_arguments_size_ValueChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(81, 263);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // n2_save_btn
+            // 
+            this.n2_save_btn.Location = new System.Drawing.Point(6, 499);
+            this.n2_save_btn.Name = "n2_save_btn";
+            this.n2_save_btn.Size = new System.Drawing.Size(75, 23);
+            this.n2_save_btn.TabIndex = 8;
+            this.n2_save_btn.Text = "Save";
+            this.n2_save_btn.UseVisualStyleBackColor = true;
+            this.n2_save_btn.Click += new System.EventHandler(this.n2_save_btn_Click);
+            // 
+            // n2_load_btn
+            // 
+            this.n2_load_btn.Location = new System.Drawing.Point(87, 499);
+            this.n2_load_btn.Name = "n2_load_btn";
+            this.n2_load_btn.Size = new System.Drawing.Size(75, 23);
+            this.n2_load_btn.TabIndex = 9;
+            this.n2_load_btn.Text = "Load";
+            this.n2_load_btn.UseVisualStyleBackColor = true;
+            this.n2_load_btn.Click += new System.EventHandler(this.n2_load_btn_Click);
+            // 
             // mainfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 673);
+            this.ClientSize = new System.Drawing.Size(791, 680);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
@@ -995,13 +1345,24 @@ namespace SimpleFirstApp
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.savestate)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.group_function_entry.ResumeLayout(false);
+            this.group_function_entry.PerformLayout();
+            this.n2_group.ResumeLayout(false);
+            this.n2_group.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.n2_grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n2_window_y)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.n2_window_x)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.neighbours_count)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.abc_color_grid)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.function_arguments_size)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1019,25 +1380,14 @@ namespace SimpleFirstApp
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel step_label;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox function_list;
-        private System.Windows.Forms.CheckBox cell_next_on;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox cell_on;
-        private System.Windows.Forms.Button func_add;
         private System.Windows.Forms.Button func_remove;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.NumericUpDown neighbours_count;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.Button btn_localobs;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbl_obs;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolTip toolTip1;
@@ -1095,6 +1445,43 @@ namespace SimpleFirstApp
         private System.Windows.Forms.NumericUpDown refresh;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.GroupBox n2_group;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox group_function_entry;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button function_entry_btn_insert;
+        private System.Windows.Forms.ComboBox function_entry_was;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox function_entry_change_to;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListBox function_entry_list;
+        private System.Windows.Forms.TextBox function_parametrs;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox function_entry_neigbour;
+        private System.Windows.Forms.NumericUpDown n2_window_y;
+        private System.Windows.Forms.NumericUpDown n2_window_x;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button abc_del_symbol;
+        private System.Windows.Forms.Button abc_add_symbol;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button abc_btn_color;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox abc_symbol;
+        private System.Windows.Forms.DataGridView abc_color_grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abc_col_int;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abc_col_symbol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abc_col_color;
+        private System.Windows.Forms.DataGridView n2_grid;
+        private System.Windows.Forms.Button n2_btn_set;
+        private System.Windows.Forms.ContextMenuStrip symbol_menu;
+        private System.Windows.Forms.ToolStripStatusLabel extra_status_lbl;
+        private System.Windows.Forms.NumericUpDown function_arguments_size;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button n2_load_btn;
+        private System.Windows.Forms.Button n2_save_btn;
     }
 }
 

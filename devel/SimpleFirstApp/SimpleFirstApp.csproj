@@ -27,7 +27,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <WebPage>publish.htm</WebPage>
-    <ApplicationVersion>1.0.0.3</ApplicationVersion>
+    <ApplicationVersion>1.5.15678.%2a</ApplicationVersion>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -89,6 +89,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\Alphabet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

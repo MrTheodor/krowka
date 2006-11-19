@@ -14,7 +14,14 @@ namespace SimpleFirstApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new mainfrm());
+            //try
+            //{
+                Application.Run(new mainfrm());
+            //}
+            //catch (Exception er)
+            //{
+            //    MessageBox.Show("Don't worry be happy.\n"+er.Message,"Funy error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            //}
         }
     }
 }
