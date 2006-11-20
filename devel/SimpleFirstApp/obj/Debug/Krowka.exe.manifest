@@ -34,7 +34,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vkJONNj2NfpQIo92wKDvzOja/XI=</dsig:DigestValue>
+        <dsig:DigestValue>cDz6ulF8AkhYvfx/Iq9WkWOqvYE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tao.OpenGl.ExtensionLoader.dll" size="20480">
+      <assemblyIdentity name="Tao.OpenGl.ExtensionLoader" version="1.5.0.3" publicKeyToken="AAADE445F4A3F192" language="neutral" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>n6gO7kAAuYDPwMO7KMLR93oh8gY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

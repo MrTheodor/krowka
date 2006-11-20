@@ -184,8 +184,8 @@ namespace SimpleFirstApp
         public void load_n2_file(string[] file) // load file and parse it
         {
             my_parse_file = file;
-            try
-            {
+            //try
+            //{
                 if (file[0] != "N2")
                     throw new System.ArgumentException("Invalid N2 file");
                 my_n2_x = Convert.ToInt16(my_parse_file[1].Split(' ')[1]);
@@ -194,11 +194,11 @@ namespace SimpleFirstApp
                 int x = Convert.ToInt16(my_parse_file[2].Split(' ')[1]);
                 int y = Convert.ToInt16(my_parse_file[2].Split(' ')[0]);
                 my_check_cell = new Point(x, y);
-            }
-            catch (Exception er)
-            {
-                throw er;
-            }
+            //}
+            //catch (Exception er)
+            //{
+            //    throw er;
+            //}
         }
 
         public Point Get_checked_cell()

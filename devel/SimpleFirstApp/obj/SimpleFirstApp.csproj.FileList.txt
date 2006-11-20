@@ -26,3 +26,5 @@ obj\Debug\SimpleFirstApp.AboutBox1.resources
 obj\Release\SimpleFirstApp.AboutBox1.resources
 obj\Release\Krowka.TrustInfo.xml
 obj\Debug\Krowka.TrustInfo.xml
+bin\Debug\Tao.OpenGl.ExtensionLoader.dll
+bin\Release\Tao.OpenGl.ExtensionLoader.dll

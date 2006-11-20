@@ -78,17 +78,23 @@ namespace SimpleFirstApp
             this.label14 = new System.Windows.Forms.Label();
             this.function_entry_list = new System.Windows.Forms.ListBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.n2_group = new System.Windows.Forms.GroupBox();
             this.n2_btn_set = new System.Windows.Forms.Button();
+            this.n2_group = new System.Windows.Forms.GroupBox();
+            this.n2_load_btn = new System.Windows.Forms.Button();
+            this.n2_save_btn = new System.Windows.Forms.Button();
             this.n2_grid = new System.Windows.Forms.DataGridView();
+            this.symbol_menu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.n2_window_y = new System.Windows.Forms.NumericUpDown();
             this.n2_window_x = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.function_arguments_size = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             this.function_parametrs = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.func_remove = new System.Windows.Forms.Button();
             this.function_list = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -109,6 +115,7 @@ namespace SimpleFirstApp
             this.step_label = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbl_stat_cursor = new System.Windows.Forms.ToolStripStatusLabel();
+            this.extra_status_lbl = new System.Windows.Forms.ToolStripStatusLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
@@ -135,13 +142,6 @@ namespace SimpleFirstApp
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.symbol_menu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.extra_status_lbl = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.function_arguments_size = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.n2_save_btn = new System.Windows.Forms.Button();
-            this.n2_load_btn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.refresh)).BeginInit();
@@ -159,12 +159,12 @@ namespace SimpleFirstApp
             ((System.ComponentModel.ISupportInitialize)(this.n2_window_y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.n2_window_x)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.function_arguments_size)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.abc_color_grid)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.function_arguments_size)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -644,7 +644,7 @@ namespace SimpleFirstApp
             // 
             this.function_entry_btn_insert.Location = new System.Drawing.Point(7, 188);
             this.function_entry_btn_insert.Name = "function_entry_btn_insert";
-            this.function_entry_btn_insert.Size = new System.Drawing.Size(77, 30);
+            this.function_entry_btn_insert.Size = new System.Drawing.Size(103, 30);
             this.function_entry_btn_insert.TabIndex = 12;
             this.function_entry_btn_insert.Text = "Insert";
             this.function_entry_btn_insert.UseVisualStyleBackColor = true;
@@ -713,6 +713,16 @@ namespace SimpleFirstApp
             this.label10.TabIndex = 0;
             this.label10.Text = "Neigbours";
             // 
+            // n2_btn_set
+            // 
+            this.n2_btn_set.Location = new System.Drawing.Point(6, 557);
+            this.n2_btn_set.Name = "n2_btn_set";
+            this.n2_btn_set.Size = new System.Drawing.Size(75, 23);
+            this.n2_btn_set.TabIndex = 9;
+            this.n2_btn_set.Text = "Set it";
+            this.n2_btn_set.UseVisualStyleBackColor = true;
+            this.n2_btn_set.Click += new System.EventHandler(this.n2_btn_set_Click);
+            // 
             // n2_group
             // 
             this.n2_group.Controls.Add(this.n2_load_btn);
@@ -731,15 +741,25 @@ namespace SimpleFirstApp
             this.n2_group.Text = "Neighbours";
             this.n2_group.Enter += new System.EventHandler(this.n2_group_Enter);
             // 
-            // n2_btn_set
+            // n2_load_btn
             // 
-            this.n2_btn_set.Location = new System.Drawing.Point(6, 557);
-            this.n2_btn_set.Name = "n2_btn_set";
-            this.n2_btn_set.Size = new System.Drawing.Size(75, 23);
-            this.n2_btn_set.TabIndex = 9;
-            this.n2_btn_set.Text = "Set it";
-            this.n2_btn_set.UseVisualStyleBackColor = true;
-            this.n2_btn_set.Click += new System.EventHandler(this.n2_btn_set_Click);
+            this.n2_load_btn.Location = new System.Drawing.Point(87, 499);
+            this.n2_load_btn.Name = "n2_load_btn";
+            this.n2_load_btn.Size = new System.Drawing.Size(75, 23);
+            this.n2_load_btn.TabIndex = 9;
+            this.n2_load_btn.Text = "Load";
+            this.n2_load_btn.UseVisualStyleBackColor = true;
+            this.n2_load_btn.Click += new System.EventHandler(this.n2_load_btn_Click);
+            // 
+            // n2_save_btn
+            // 
+            this.n2_save_btn.Location = new System.Drawing.Point(6, 499);
+            this.n2_save_btn.Name = "n2_save_btn";
+            this.n2_save_btn.Size = new System.Drawing.Size(75, 23);
+            this.n2_save_btn.TabIndex = 8;
+            this.n2_save_btn.Text = "Save";
+            this.n2_save_btn.UseVisualStyleBackColor = true;
+            this.n2_save_btn.Click += new System.EventHandler(this.n2_save_btn_Click);
             // 
             // n2_grid
             // 
@@ -762,6 +782,13 @@ namespace SimpleFirstApp
             this.n2_grid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.n2_grid_CellClick);
             this.n2_grid.ContextMenuStripChanged += new System.EventHandler(this.n2_grid_ContextMenuStripChanged);
             this.n2_grid.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.n2_grid_CellLeave);
+            // 
+            // symbol_menu
+            // 
+            this.symbol_menu.MaximumSize = new System.Drawing.Size(0, 500);
+            this.symbol_menu.Name = "symbol_menu";
+            this.symbol_menu.Size = new System.Drawing.Size(61, 4);
+            this.symbol_menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.symbol_menu_ItemClicked);
             // 
             // n2_window_y
             // 
@@ -836,6 +863,38 @@ namespace SimpleFirstApp
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Function";
             // 
+            // function_arguments_size
+            // 
+            this.function_arguments_size.Location = new System.Drawing.Point(129, 228);
+            this.function_arguments_size.Maximum = new decimal(new int[] {
+            64,
+            0,
+            0,
+            0});
+            this.function_arguments_size.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.function_arguments_size.Name = "function_arguments_size";
+            this.function_arguments_size.Size = new System.Drawing.Size(45, 20);
+            this.function_arguments_size.TabIndex = 15;
+            this.function_arguments_size.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.function_arguments_size.ValueChanged += new System.EventHandler(this.function_arguments_size_ValueChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 230);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(117, 13);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Liczba wartoœci funkcji:";
+            // 
             // function_parametrs
             // 
             this.function_parametrs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -864,6 +923,16 @@ namespace SimpleFirstApp
             this.button2.Text = "Load";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(81, 263);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // func_remove
             // 
@@ -1051,6 +1120,12 @@ namespace SimpleFirstApp
             this.lbl_stat_cursor.Name = "lbl_stat_cursor";
             this.lbl_stat_cursor.Size = new System.Drawing.Size(25, 17);
             this.lbl_stat_cursor.Text = "0x0";
+            // 
+            // extra_status_lbl
+            // 
+            this.extra_status_lbl.Name = "extra_status_lbl";
+            this.extra_status_lbl.Size = new System.Drawing.Size(109, 17);
+            this.extra_status_lbl.Text = "toolStripStatusLabel3";
             // 
             // openFileDialog1
             // 
@@ -1242,81 +1317,6 @@ namespace SimpleFirstApp
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
-            // symbol_menu
-            // 
-            this.symbol_menu.MaximumSize = new System.Drawing.Size(0, 500);
-            this.symbol_menu.Name = "symbol_menu";
-            this.symbol_menu.Size = new System.Drawing.Size(61, 4);
-            this.symbol_menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.symbol_menu_ItemClicked);
-            // 
-            // extra_status_lbl
-            // 
-            this.extra_status_lbl.Name = "extra_status_lbl";
-            this.extra_status_lbl.Size = new System.Drawing.Size(109, 17);
-            this.extra_status_lbl.Text = "toolStripStatusLabel3";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 230);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(117, 13);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Liczba wartoœci funkcji:";
-            // 
-            // function_arguments_size
-            // 
-            this.function_arguments_size.Location = new System.Drawing.Point(129, 228);
-            this.function_arguments_size.Maximum = new decimal(new int[] {
-            64,
-            0,
-            0,
-            0});
-            this.function_arguments_size.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.function_arguments_size.Name = "function_arguments_size";
-            this.function_arguments_size.Size = new System.Drawing.Size(45, 20);
-            this.function_arguments_size.TabIndex = 15;
-            this.function_arguments_size.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.function_arguments_size.ValueChanged += new System.EventHandler(this.function_arguments_size_ValueChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(81, 263);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // n2_save_btn
-            // 
-            this.n2_save_btn.Location = new System.Drawing.Point(6, 499);
-            this.n2_save_btn.Name = "n2_save_btn";
-            this.n2_save_btn.Size = new System.Drawing.Size(75, 23);
-            this.n2_save_btn.TabIndex = 8;
-            this.n2_save_btn.Text = "Save";
-            this.n2_save_btn.UseVisualStyleBackColor = true;
-            this.n2_save_btn.Click += new System.EventHandler(this.n2_save_btn_Click);
-            // 
-            // n2_load_btn
-            // 
-            this.n2_load_btn.Location = new System.Drawing.Point(87, 499);
-            this.n2_load_btn.Name = "n2_load_btn";
-            this.n2_load_btn.Size = new System.Drawing.Size(75, 23);
-            this.n2_load_btn.TabIndex = 9;
-            this.n2_load_btn.Text = "Load";
-            this.n2_load_btn.UseVisualStyleBackColor = true;
-            this.n2_load_btn.Click += new System.EventHandler(this.n2_load_btn_Click);
-            // 
             // mainfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1354,6 +1354,7 @@ namespace SimpleFirstApp
             ((System.ComponentModel.ISupportInitialize)(this.n2_window_x)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.function_arguments_size)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1362,7 +1363,6 @@ namespace SimpleFirstApp
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.function_arguments_size)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

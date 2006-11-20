@@ -4,14 +4,14 @@
   <description asmv2:publisher="Krowka" asmv2:product="Krowka" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Krowka.exe.manifest" size="2174">
+    <dependentAssembly dependencyType="install" codebase="Krowka.exe.manifest" size="2831">
       <assemblyIdentity name="Krowka.exe" version="1.5.15678.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>RrxKwziDvcwoE9D2EMJKl1pd8k8=</dsig:DigestValue>
+        <dsig:DigestValue>5r1X4i7+sxHydraDt9debJWhW3I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

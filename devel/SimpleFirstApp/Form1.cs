@@ -562,20 +562,25 @@ namespace SimpleFirstApp
 
         private string[] make_n2()
         {
-            string[] act_n2 = { "N2", n2_window_y.Value.ToString() + " " + n2_window_x.Value.ToString() + " ", n2_cell_selected.Y.ToString() + " " + n2_cell_selected.X.ToString() };
+            string[] act_n2 = { "N2", "", n2_cell_selected.Y.ToString() + " " + n2_cell_selected.X.ToString() };
+            int neighbours_count = 0;
             foreach (DataGridViewRow row in n2_grid.Rows)
             {
                 string line = "";
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    if (line != "-")
+                    if (cell.Value.ToString() != "-")
                         line += m_Game.alphabet.code(Convert.ToInt32(cell.Value));
                     else
+                    {
                         line += cell.Value;
+                        neighbours_count++;
+                    }
                 }
                 Array.Resize(ref act_n2, act_n2.Length + 1);
                 act_n2[act_n2.Length - 1] = line;
             }
+            act_n2[1] = n2_window_y.Value.ToString() + " " + n2_window_x.Value.ToString() + " " + neighbours_count.ToString();
             return act_n2;
         }
 
