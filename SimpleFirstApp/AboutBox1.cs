@@ -123,5 +123,9 @@ namespace SimpleFirstApp
         {
             this.Hide();
         }
+        
+        public void test()
+        {
+        }
     }
 }
